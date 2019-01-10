@@ -1,3 +1,4 @@
 node_modules/
 *.appcache
+editorservice/project.setting
 editorservice/editor.appcache
