@@ -524,7 +524,7 @@ function buildAndroid(dstDir, iconList, splash)
             var buf = new Buffer(data, 'base64');
             var filePath = path.join(dstDir, 'app/res', imagePath[idx]);
             fs.ensureDirSync(path.dirname(filePath));
-            fs.writeFile(filePath, buf);
+            fs.writeFileSync(filePath, buf);
         }
     }
 };
@@ -630,7 +630,7 @@ function buildIOS(dstDir, iconList, splash)
             var buf = new Buffer(data, 'base64');
             var filePath = path.join(dstDir, 'App/Assets.xcassets/AppIcon.appiconset', imagePath[idx]);
             fs.ensureDirSync(path.dirname(filePath));
-            fs.writeFile(filePath, buf);
+            fs.writeFileSync(filePath, buf);
         }
     }
 
@@ -660,7 +660,7 @@ function buildIOS(dstDir, iconList, splash)
             var buf = new Buffer(data, 'base64');
             var filePath = path.join(dstDir, 'App/Assets.xcassets/LaunchImage.launchimage', splashPath[idx]);
             fs.ensureDirSync(path.dirname(filePath));
-            fs.writeFile(filePath, buf);
+            fs.writeFileSync(filePath, buf);
         }
     }
 

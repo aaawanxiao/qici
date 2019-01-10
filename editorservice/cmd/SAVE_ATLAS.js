@@ -27,7 +27,7 @@ COMMAND_D.registerCmd({
         fs.writeJSONSync(jsonPath, json);
 
         var filePath = path.join(dir, atlasName + '.png');
-        fs.writeFile(filePath, buf);
+        fs.writeFileSync(filePath, buf);
         return { 'operRet' : true, }
     }
 });

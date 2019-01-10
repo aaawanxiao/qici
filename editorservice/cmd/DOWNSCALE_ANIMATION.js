@@ -18,7 +18,7 @@ COMMAND_D.registerCmd({
         // 写 png
         var data = img.replace(/^data:image\/\w+;base64,/, "");
         var buf = new Buffer(data, 'base64');
-        fs.writeFile(dir + '.png', buf);
+        fs.writeFileSync(dir + '.png', buf);
 
         // 改 json/ani
         deepModifyXYWH(dir + '.json', 0.5);
